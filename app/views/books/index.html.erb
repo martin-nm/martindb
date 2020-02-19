@@ -1,0 +1,14 @@
+<h1>+++++++ Books +++++++</h1>
+<br>
+
+<p><%= link_to "Add book", new_book_path %></p>
+
+
+<% @books.each do |book| %>
+  <div class="cards">
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+      <%= book.name %>
+      <h3><%= link_to book.name, book_path(book) %></h3>
+    </div>
+  </div>
+<% end %>

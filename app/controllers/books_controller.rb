@@ -1,7 +1,7 @@
 class BooksController < ApplicationController
 
   def index
-    @books = Books.all
+    @books = Book.all
   end
 
   def new
@@ -25,6 +25,7 @@ class BooksController < ApplicationController
     else
       redirect_to book_path(@book)
     end
+  end
 
 private
 

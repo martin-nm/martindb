@@ -1,0 +1,12 @@
+
+<h1>Create a Book</h1>
+<%= simple_form_for [@book] do |f| %>
+  <%= f.input :book_title %>
+  <%= f.input :book_author %>
+  <%= f.input :read %>
+  <%= f.input :read_date %>
+  <%= f.input :rating %>
+  <%= f.input :recco_by %>
+  <%= f.submit class: "btn btn-primary" %>
+<% end %>
+<p><%= link_to "See all books", books_path  %></p>
